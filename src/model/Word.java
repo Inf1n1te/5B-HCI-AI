@@ -37,7 +37,7 @@ public class Word {
 		}
 	}
 
-	public void calculateSmoothProbs(int vocab, int k, int female, int male) {
+	public void calculateSmoothProbs(int vocab, float k, int female, int male) {
 		if (femaleCount == 0) {
 			probFemale = 0;
 		} else {

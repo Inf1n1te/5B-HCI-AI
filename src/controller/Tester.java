@@ -1,5 +1,6 @@
 package controller;
 
+import tokenization.Token;
 import model.Words;
 
 public class Tester {
@@ -8,11 +9,10 @@ public class Tester {
 	private double probabilityFemale = 0;
 
 	public Tester(String sentence, Words words) {
-		// Tokenize
-		String[] test = new String[10];
-		for (int i = 0; i < test.length; i++) {
-			probabilityMale += words.getProb(test[i], true);
-			probabilityFemale += words.getProb(test[i], false);
+		String[] token = Token.tokenize(sentence);
+		for (int i = 0; i < token.length; i++) {
+			probabilityMale += words.getProb(token[i], true);
+			probabilityFemale += words.getProb(token[i], false);
 		}
 	}
 	
@@ -21,6 +21,16 @@ public class Tester {
 			return probabilityMale;
 		} else { 
 			return probabilityFemale;
+		}
+	}
+	
+	public String getGender() {
+		if (probabilityFemale > probabilityMale) {
+			return "Female";
+		} else if (probabilityFemale < probabilityMale) {
+			return "Male";
+		} else {
+			return "Equal";
 		}
 	}
 

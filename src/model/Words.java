@@ -7,7 +7,7 @@ public class Words {
 	private int maleCount = 0;
 	private int femaleCount = 0;
 	private ArrayList<Word> words;
-	private int k;
+	private float k;
 
 	public Words() {
 		words = new ArrayList<Word>();
@@ -39,7 +39,7 @@ public class Words {
 		k = 0;
 	}
 
-	public void calculateSmoothProbs(int k) {
+	public void calculateSmoothProbs(float k) {
 		for (int i = 0; i < words.size(); i++) {
 			words.get(i).calculateSmoothProbs(words.size(), k, femaleCount,
 					maleCount);
