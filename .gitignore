@@ -13,3 +13,5 @@ hs_err_pid*
 
 # Other ingores:
 /bin
+/blogtrain
+/blogtest
