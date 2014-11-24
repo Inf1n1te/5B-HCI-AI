@@ -12,6 +12,4 @@
 hs_err_pid*
 
 # Other ingores:
-.classpath
-.project
 /bin
