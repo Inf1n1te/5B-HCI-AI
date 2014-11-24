@@ -1,14 +1,14 @@
 package controller;
 
-public class Main {
+import model.Words;
 
-	public Main() {
-		// TODO Auto-generated constructor stub
-	}
+public class Main {
+	
+	private float k = 1;
+	private Words words = new Words();
 
 	public static void main(String[] args) {
 		// TODO start training
-		
 
 	}
 
