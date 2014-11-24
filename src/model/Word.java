@@ -29,12 +29,12 @@ public class Word {
 		return word;
 	}
 
-	public double getProbMale() {
-		return probMale;
-	}
-
-	public double getProbFemale() {
-		return probFemale;
+	public double getProb(boolean male) {
+		if (male) {
+			return probMale;
+		} else {
+			return probFemale;
+		}
 	}
 
 	public void calculateSmoothProbs(int vocab, int k, int female, int male) {
