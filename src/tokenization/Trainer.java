@@ -20,25 +20,25 @@ private Words words;
 
 	public Trainer(Words words) throws FileNotFoundException, IOException {
 	    this.words = words;
-		files = new File("C:/Universiteit/F").listFiles();
+		files = new File("/media/inf1n1te/Data/Documents 2/Linux Workspace/5B-HCI-AI/blogtrain").listFiles();
 	    top();
 	    
 	    //pullAll(file);
 	}
 
 	public void top() throws FileNotFoundException, IOException{
+		System.out.println("Starting");
 		for (int i = 0; i < files.length; i++){
 	        if (files[i].isFile()){ //this line weeds out other directories/folders
-	            System.out.println("Starting");
 	        	String[] s = pullAll(files[i]);
 	        	gender(files[i]);
 	        	
 	        	for(int j=0; j < s.length;j++){
 	        		words.addWord(s[j], gender);
 	        	}
-	        	System.out.println(gender);
 	        }
 	    }
+		System.out.println("Done");
 	}
 	
 	

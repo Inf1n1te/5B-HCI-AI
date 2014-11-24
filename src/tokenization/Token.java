@@ -49,9 +49,8 @@ private static File file;
 
 	public static String[] tokenize(String c){
 		String[] tokenized = c.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
-		System.out.println(Arrays.toString(tokenized));
+//		System.out.println(Arrays.toString(tokenized));
 		return tokenized;
-		
 	}
 		
 	
