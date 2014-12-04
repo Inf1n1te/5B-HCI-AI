@@ -6,14 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Token {
 
-// str
-	
 private String everything;
-private static File file;
 	
 	
 	public Token(File path) throws FileNotFoundException, IOException {
